@@ -1,0 +1,36 @@
+.dashboard-card {
+  background-color: white;  
+  padding: 16px;
+  width: 160px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 14px;
+  /* color: #333; */
+  font-weight: 900;
+}
+
+.card-value {
+  font-size: 24px;
+  font-weight: 900;
+  color: #111;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 4px 0;
+}
+
+.card-add {
+  font-size: 13px;
+  text-decoration: underline;
+  color: #c24a2d;
+  cursor: pointer;
+  font-weight: 900;
+
+}

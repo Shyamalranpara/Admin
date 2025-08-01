@@ -1,0 +1,16 @@
+.main-table {
+    position: relative;
+}
+
+.btn-save {
+    position: absolute;
+    bottom: 5px;
+    right: 0px;
+    background-color: #FF7F50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}

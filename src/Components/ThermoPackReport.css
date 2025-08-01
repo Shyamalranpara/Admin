@@ -1,0 +1,21 @@
+.main-report{
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 15px;
+}
+.btn-org{
+     background-color: #FF7F50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.second{
+    display: flex;
+align-items: center;
+gap: 20px;
+justify-content: space-evenly;
+}
