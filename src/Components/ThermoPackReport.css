@@ -3,19 +3,48 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 padding: 15px;
+background-color: white;
 }
-.btn-org{
-     background-color: #FF7F50;
+/* .btn-org{
+  background-color: #FF774B;
   color: white;
   border: none;
   padding: 8px 16px;
   font-size: 16px;
   border-radius: 4px;
   cursor: pointer;
+} */
+ .border-btn{
+  background-color: transparent;
+  color: #FF774B;
+  border: 2px solid #FF774B;
+  padding: 8px 24px;
+  font-size: 16px;
+  cursor: pointer;
 }
+.border-btn-2{
+  background-color: transparent;
+  border: 2px solid gainsboro;
+  padding: 8px 24px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
 .second{
-    display: flex;
+display: flex;
 align-items: center;
 gap: 20px;
 justify-content: space-evenly;
+}
+.main-checkbox{
+background-color: white;
+padding: 15px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.checkboxes{
+display: flex;
+align-items: center;
+gap: 20px;
 }

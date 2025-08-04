@@ -1,144 +1,113 @@
 import React from 'react';
-import { Table } from 'antd';
+import { Table, Input } from 'antd';
 import './Tablefiled.css';
+
 const columns = [
   {
     title: 'Time',
     dataIndex: 'time',
+    render: (text) => text,
   },
   {
-    title: 'Furnace Draft (Dt-10-3)',
+    title: (
+      <>
+        Flue Gas Temp. <br />
+        (Te-10-1)
+      </>
+    ),
     dataIndex: 'furnaceDraft',
+    render: () => <Input placeholder="Enter" />,
   },
   {
-    title: 'Sand Level (Pt-5-4)',
+    title: (
+      <>
+        Sand Level <br /> (Pt-5-4)
+      </>
+    ),
     dataIndex: 'sandLevel',
+    render: () => <Input placeholder="Enter" />,
   },
   {
-    title: 'T.f Out Let Temp. (Te-9-10)',
+    title: (
+      <>
+        T.f Out Let Temp.  <br /> (Te-9-10)
+      </>
+    ),
+
     dataIndex: 'tfOut',
+    render: () => <Input placeholder="Enter" />,
   },
   {
-    title: 'Ibh Inlet Let Temp. (Te-9-1)',
+    title: (
+      <>
+        Ibh Inlet Let Temp.  (Te-9-1)
+      </>
+    ),
     dataIndex: 'ibhInlet',
+    render: () => <Input placeholder="Enter" />,
   },
   {
     title: 'Delta',
     dataIndex: 'delta',
+    render: () => <Input placeholder="Enter" />,
   },
   {
-    title: 'Bed Temp. (Te-10-4)',
+    title: (
+      <>
+        Bed Temp <br />  (Te-10-4)
+      </>
+    ),
     dataIndex: 'bedTemp',
+    render: () => <Input placeholder="Enter" />,
   },
   {
     title: 'Fd Fan Air Temp',
     dataIndex: 'fdFanTemp',
+    render: () => <Input placeholder="Enter" />,
   },
   {
-    title: 'Flue Gas Temp. (Te-10-1)',
+    title: (
+      <>
+        Flue Gas Temp. <br />  (Te-10-1)
+      </>
+    ),
     dataIndex: 'flueGasTemp',
+    render: () => <Input placeholder="Enter" />,
   },
   {
     title: 'Heat Output Load',
     dataIndex: 'heatOutput',
+    render: () => <Input placeholder="Enter" />,
   },
 ];
 
-const data = [
-  {
-    key: '0',
-    time: '08:00',
-  },
-  {
-    key: '1',
-    time: '09:00',
-  },{
-    key: '2',
-    time: '10:00',
-  },{
-    key: '3',
-    time: '11:00',
-  },{
-    key: '4',
-    time: '12:00',
-  },{
-    key: '5',
-    time: '13:00',
-  },{
-    key: '6',
-    time: '14:00',
-  },
-  {
-    key: '7',
-    time: '15:00',
-  },{
-    key: '8',
-    time: '16:00',
-  },{
-    key: '9',
-    time: '17:00',
-  },{
-    key: '10',
-    time: '18:00',
-  },{
-    key: '11',
-    time: '19:00',
-  },{
-    key: '12',
-    time: '20:00',
-  },{
-    key: '13',
-    time: '21:00',
-  },
-  {
-    key: '14',
-    time: '22:00',
-  },{
-    key: '15',
-    time: '23:00',
-  },{
-    key: '16',
-    time: '00:00',
-  },{
-    key: '17',
-    time: '01:00',
-  },
-  {
-    key: '18',
-    time: '02:00',
-    
-  },{
-    key: '19',
-    time: '03:00',
-  },{
-    key: '20',
-    time: '04:00',
-  },{
-    key: '21',
-    time: '05:00',
-  },{
-    key: '22',
-    time: '06:00',
-  },
-  {
-    key: '23',
-    time: '07:00',
-  },
+
+const timeSlots = [
+  '08:00', '09:00', '10:00', '11:00', '12:00',
+  '13:00', '14:00', '15:00', '16:00', '17:00',
+  '18:00', '19:00', '20:00', '21:00', '22:00',
+  '23:00', '00:00', '01:00', '02:00', '03:00',
+  '04:00', '05:00', '06:00', '07:00',
 ];
 
 const Tablefilled = () => {
+  const data = timeSlots.map((time, index) => ({
+    key: String(index + 1),
+    time,
+  }));
   return (
     <div className='main-table'>
-    <Table
-      columns={columns}
-      dataSource={data} 
-      pagination={false}
+      <Table
+        columns={columns}
+        dataSource={data}
+        pagination={false}
       // bordered
-    />
-    <div>
-            <button className='btn-save'>Add Hour</button>
-        </div>
-        </div>
+      // scroll={{ x: 'max-content' }}
+      />
+      <div>
+        <button className='btn-save'>Add Hour</button>
+      </div>
+    </div>
   );
 };
 
